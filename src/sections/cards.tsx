@@ -8,17 +8,22 @@ const Cards = () => {
   const router = useRouter();
 
   return (
-    <section className="pt-8 pb-20 md:pt-10 md:pb-16 bg-gray-100">
+    <section
+      className="pt-8 pb-20 md:pt-10 md:pb-16 bg-cover bg-center bg-fixed"
+      style={{
+        backgroundImage: "url('/bg.png')",
+      }}
+    >
       {/* الحاوية الرئيسية */}
       <div className="container mx-auto max-w-6xl bg-white shadow-md rounded-lg overflow-hidden p-6">
         {/* عنوان القسم */}
         <div className="text-center mb-10">
-          <h1 className="text-3xl font-bold text-gray-800">
-            Выберите дом, который подходит именно Вам
+          <h1 className="text-2xl font-bold text-gray-800">
+            Выберите дом своей мечты – начните новую жизнь уже сегодня!
           </h1>
           <p className="text-gray-600 mt-2">
             В разделе представлен{" "}
-            <span className="text-blue-500 font-semibold">ТОП-20</span> проектов
+            <span className="text-blue-500 font-semibold">ТОП</span> проектов
             сезона 2024.
           </p>
         </div>

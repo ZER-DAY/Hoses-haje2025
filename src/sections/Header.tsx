@@ -15,12 +15,13 @@ export const Header = () => {
           <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" />
         </div>
       </div>
-      <div className="py-5  bg-stone-200">
+      <div className="py-5  bg-stone-400">
         <div className="container ">
           <div className="flex items-center justify-between">
             <Image src={Logo} alt="Saas Logo" height={40} width={40} />
             <MenuIcon className="h-5 w-5 md:hidden" />
             <nav className="hidden md:flex gap-6 text-black/60 items-center">
+              <a href="#">Главная</a>
               <a href="#">Каталог проектов</a>
               <a href="#">Барнхаусы</a>
               <a href="#">Фахверки</a>

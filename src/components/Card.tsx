@@ -41,7 +41,7 @@ const Card: React.FC<CardProps> = ({
       <div className="p-4">
         <h2 className="text-lg font-bold text-center mb-2">{title}</h2>
         <div className="text-sm text-gray-600 flex justify-between mb-2">
-          <span>🛏️ {rooms}</span>
+          {/* <span>🛏️ {rooms}</span> */}
           <span>📐 {size}</span>
         </div>
         <div className="text-blue-600 font-bold text-xl text-center mb-3">

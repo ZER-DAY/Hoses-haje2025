@@ -1,4 +1,4 @@
-// File: C:\Users\Bahaa\Desktop\saasNextFramerMotion-main\src\app\layout.tsx
+// File: C:\Users\Bahaa\Desktop\Hoses-haje2025\src\app\layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -21,7 +21,7 @@ export default function Details({ params }: { params: { id: string } }) {
         <div className="flex flex-col md:flex-row p-6 ml-4">
           {/* معرض الصور */}
           <div className="md:w-1/2   ">
-            <div className=" grid grid-cols-2 gap-4">
+            <div className=" grid grid-cols-2 gap-4 ">
               <SwiperGallery images={house.images} />
             </div>
           </div>

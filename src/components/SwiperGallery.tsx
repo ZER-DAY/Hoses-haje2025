@@ -13,7 +13,8 @@ export default function SwiperGallery({ images }: { images: string[] }) {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperInstance | null>(null);
 
   return (
-    <div className="w-full p-4 mx-auto">
+    // التحكم في العرض
+    <div className=" w-[450px] p-4 mx-auto  ">
       {/* معرض الصور الرئيسي */}
       <div className="relative">
         <Swiper
