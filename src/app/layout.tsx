@@ -1,9 +1,13 @@
+import { Inter } from "next/font/google";
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 
-const dmSans = DM_Sans({ subsets: ["latin"] });
+// استيراد خط Inter مع وزن خفيف
+const inter = Inter({
+  subsets: ["latin", "cyrillic"], // دعم السيريلية
+  weight: ["300", "400"], // أوزان خفيفة
+});
 
 export const metadata: Metadata = {
   title: "Light Saas Landing Page",
@@ -16,8 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="relative">
-      <body className={twMerge(dmSans.className, "antialiased bg-[#EAEEFE]")}>
+    <html lang="ru" className="relative">
+      {" "}
+      {/* تحديد اللغة الروسية */}
+      <body className={twMerge(inter.className, "antialiased bg-[#EAEEFE]")}>
         {children}
       </body>
     </html>
