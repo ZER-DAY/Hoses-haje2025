@@ -69,17 +69,16 @@ export default function BuildStages() {
         </h2>
 
         {/* الصف الأول */}
-        <div className="grid grid-cols-12 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-8 mb-8">
           {stages.slice(0, 4).map((stage) => (
             <div
               key={stage.id}
-              className="relative col-span-12 sm:col-span-6 lg:col-span-3 p-6 bg-white rounded-lg shadow-lg transform transition duration-300 hover:shadow-2xl hover:-translate-y-2"
+              className="relative p-6 bg-white rounded-lg shadow-lg transform transition duration-300 hover:shadow-2xl hover:-translate-y-2"
             >
-              {/* غطاء التظليل */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-transparent opacity-0 hover:opacity-30 transition duration-300 rounded-lg"></div>
               <div className="relative z-10">
                 <div className="mb-4 flex justify-center relative">
-                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-gray-200 flex items-center justify-center overflow-hidden">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full border-4 border-gray-200 flex items-center justify-center overflow-hidden">
                     {stage.imageSrc ? (
                       <Image
                         src={stage.imageSrc}
@@ -94,16 +93,18 @@ export default function BuildStages() {
                       </div>
                     )}
                   </div>
-                  <div className="absolute top-1/2 right-[-25px] transform -translate-y-1/2 text-gray-300 font-bold text-5xl flex items-center space-x-2">
+                  <div className="absolute top-1/2 right-[-20px] sm:right-[-25px] transform -translate-y-1/2 text-gray-300 font-bold text-4xl sm:text-5xl flex items-center space-x-2">
                     <span>{stage.id}</span>
                     <span className="text-lg text-gray-500">{stage.step}</span>
                   </div>
                 </div>
                 <div className="text-center">
-                  <h3 className="font-bold text-lg text-gray-800 mb-2">
+                  <h3 className="font-bold text-base sm:text-lg text-gray-800 mb-2">
                     {stage.title}
                   </h3>
-                  <p className="text-gray-600">{stage.description}</p>
+                  <p className="text-gray-600 text-sm sm:text-base">
+                    {stage.description}
+                  </p>
                 </div>
               </div>
             </div>
@@ -111,17 +112,16 @@ export default function BuildStages() {
         </div>
 
         {/* الصف الثاني */}
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-8">
           {stages.slice(4, 6).map((stage) => (
             <div
               key={stage.id}
-              className="relative col-span-12 sm:col-span-6 lg:col-span-3 p-6 bg-white rounded-lg shadow-lg transform transition duration-300 hover:shadow-2xl hover:-translate-y-2"
+              className="relative p-6 bg-white rounded-lg shadow-lg transform transition duration-300 hover:shadow-2xl hover:-translate-y-2"
             >
-              {/* غطاء التظليل */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-transparent opacity-0 hover:opacity-30 transition duration-300 rounded-lg"></div>
               <div className="relative z-10">
                 <div className="mb-4 flex justify-center relative">
-                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-gray-200 flex items-center justify-center overflow-hidden">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full border-4 border-gray-200 flex items-center justify-center overflow-hidden">
                     {stage.imageSrc ? (
                       <Image
                         src={stage.imageSrc}
@@ -136,57 +136,55 @@ export default function BuildStages() {
                       </div>
                     )}
                   </div>
-                  <div className="absolute top-1/2 right-[-25px] transform -translate-y-1/2 text-gray-300 font-bold text-5xl flex items-center space-x-2">
+                  <div className="absolute top-1/2 right-[-20px] sm:right-[-25px] transform -translate-y-1/2 text-gray-300 font-bold text-4xl sm:text-5xl flex items-center space-x-2">
                     <span>{stage.id}</span>
                     <span className="text-lg text-gray-500">{stage.step}</span>
                   </div>
                 </div>
                 <div className="text-center">
-                  <h3 className="font-bold text-lg text-gray-800 mb-2">
+                  <h3 className="font-bold text-base sm:text-lg text-gray-800 mb-2">
                     {stage.title}
                   </h3>
-                  <p className="text-gray-600">{stage.description}</p>
+                  <p className="text-gray-600 text-sm sm:text-base">
+                    {stage.description}
+                  </p>
                 </div>
               </div>
             </div>
           ))}
 
           {/* البطاقة الأخيرة */}
-          <div className="relative col-span-12 sm:col-span-6 lg:col-span-6 bg-white rounded-lg shadow-lg transform transition duration-300 hover:shadow-2xl hover:-translate-y-2 flex flex-col">
-            {/* غطاء التظليل */}
+          <div className="relative bg-white rounded-lg shadow-lg transform transition duration-300 hover:shadow-2xl hover:-translate-y-2 flex flex-col">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-transparent opacity-0 hover:opacity-30 transition duration-300 rounded-lg"></div>
-            {/* النصوص والصور */}
             <div className="relative z-10 flex-grow p-6 flex flex-col items-center lg:items-start">
-              {/* صورة المفتاح */}
               {stages[6].keyImage ? (
                 <Image
                   src={stages[6].keyImage}
                   alt="Key"
-                  width={300}
-                  height={160}
+                  width={250}
+                  height={140}
                   className="mb-4"
                 />
               ) : (
-                <div className="w-80 h-40 bg-gray-200 flex items-center justify-center text-gray-500">
+                <div className="w-64 h-32 bg-gray-200 flex items-center justify-center text-gray-500">
                   No Image Available
                 </div>
               )}
-              <h3 className="font-bold text-lg text-sky-800 mb-2">
+              <h3 className="font-bold text-base sm:text-lg text-sky-800 mb-2">
                 {stages[6].title}
               </h3>
-              <p className="text-gray-600 text-center lg:text-left leading-relaxed max-w-prose">
+              <p className="text-gray-600 text-sm sm:text-base text-center lg:text-left leading-relaxed max-w-prose">
                 {stages[6].description}
               </p>
             </div>
-            {/* صورة المنزل */}
             <div className="relative w-full">
               {stages[6].imageSrc ? (
                 <Image
                   src={stages[6].imageSrc}
                   alt="Home"
-                  width={441}
-                  height={303}
-                  className="rounded-b-lg object-cover w-full ml-28"
+                  width={360}
+                  height={250}
+                  className="rounded-b-lg object-cover w-full ml-40"
                 />
               ) : (
                 <div className="w-full h-40 bg-gray-200 flex items-center justify-center text-gray-500 rounded-b-lg">
